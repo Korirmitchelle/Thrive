@@ -18,6 +18,7 @@
 		330BB65523453FA300B1E019 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330BB65423453FA300B1E019 /* HomeViewController.swift */; };
 		33A701D8234873320002E9D6 /* SwipableContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A701D7234873320002E9D6 /* SwipableContentViewController.swift */; };
 		33A701DC2348AE050002E9D6 /* ItemsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A701DB2348AE050002E9D6 /* ItemsTabViewController.swift */; };
+		33A701E42348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A701E32348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		330BB65423453FA300B1E019 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		33A701D7234873320002E9D6 /* SwipableContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableContentViewController.swift; sourceTree = "<group>"; };
 		33A701DB2348AE050002E9D6 /* ItemsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTabViewController.swift; sourceTree = "<group>"; };
+		33A701E32348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCollectionViewCell.swift; sourceTree = "<group>"; };
 		450A6DB03C6C851F5FB904AC /* Pods_thrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D75108FA35491E2E4F71789 /* Pods-thrive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thrive.debug.xcconfig"; path = "Target Support Files/Pods-thrive/Pods-thrive.debug.xcconfig"; sourceTree = "<group>"; };
 		911E027011832B8BAC1DE8B3 /* Pods-thrive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-thrive.release.xcconfig"; path = "Target Support Files/Pods-thrive/Pods-thrive.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,18 +74,35 @@
 		0475CCBB234234CC00BFC56E /* thrive */ = {
 			isa = PBXGroup;
 			children = (
+				33A701E12348DA320002E9D6 /* Views */,
 				0475CCBC234234CC00BFC56E /* AppDelegate.swift */,
 				0475CCBE234234CC00BFC56E /* SceneDelegate.swift */,
 				0475CCC0234234CC00BFC56E /* ViewController.swift */,
-				0475CCC2234234CC00BFC56E /* Main.storyboard */,
 				0475CCC5234234D200BFC56E /* Assets.xcassets */,
-				0475CCC7234234D200BFC56E /* LaunchScreen.storyboard */,
 				0475CCCA234234D200BFC56E /* Info.plist */,
 				330BB65423453FA300B1E019 /* HomeViewController.swift */,
-				33A701D7234873320002E9D6 /* SwipableContentViewController.swift */,
 				33A701DB2348AE050002E9D6 /* ItemsTabViewController.swift */,
+				33A701E22348DA4D0002E9D6 /* UI */,
 			);
 			path = thrive;
+			sourceTree = "<group>";
+		};
+		33A701E12348DA320002E9D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33A701D7234873320002E9D6 /* SwipableContentViewController.swift */,
+				33A701E32348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33A701E22348DA4D0002E9D6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0475CCC7234234D200BFC56E /* LaunchScreen.storyboard */,
+				0475CCC2234234CC00BFC56E /* Main.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		5C15F1C6AF4735429B0C5684 /* Pods */ = {
@@ -218,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A701E42348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift in Sources */,
 				330BB65523453FA300B1E019 /* HomeViewController.swift in Sources */,
 				049FF33823429EE200EB8BF5 /* customButtons.swift in Sources */,
 				0475CCC1234234CC00BFC56E /* ViewController.swift in Sources */,
