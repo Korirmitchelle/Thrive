@@ -14,20 +14,26 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var buttonsCollectionView: UICollectionView!
     @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var counterView: UIView!
+    @IBOutlet weak var counterLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonsCollectionView.delegate = self
         buttonsCollectionView.dataSource = self
+        hideLoader()
         
     }
     func showLoader(){
         containerView.isHidden = true
         loadingView.isHidden = false
+        counterView.isHidden = true
     }
     func hideLoader(){
         containerView.isHidden = false
         loadingView.isHidden = true
+        counterView.isHidden = false
+        counterLabel.text = String(AppValues.itemCount)
     }
 }
 extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{

@@ -16,6 +16,7 @@
 		049FF33823429EE200EB8BF5 /* customButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049FF33723429EE200EB8BF5 /* customButtons.swift */; };
 		3144F780105D9FF6F4147A7C /* Pods_thrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 450A6DB03C6C851F5FB904AC /* Pods_thrive.framework */; };
 		330BB65523453FA300B1E019 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330BB65423453FA300B1E019 /* HomeViewController.swift */; };
+		332370B3234BCEF700090505 /* AppValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332370B2234BCEF700090505 /* AppValues.swift */; };
 		33A701D8234873320002E9D6 /* SwipableContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A701D7234873320002E9D6 /* SwipableContentViewController.swift */; };
 		33A701DC2348AE050002E9D6 /* ItemsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A701DB2348AE050002E9D6 /* ItemsTabViewController.swift */; };
 		33A701E42348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A701E32348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift */; };
@@ -32,6 +33,7 @@
 		0475CCCA234234D200BFC56E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049FF33723429EE200EB8BF5 /* customButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customButtons.swift; sourceTree = "<group>"; };
 		330BB65423453FA300B1E019 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		332370B2234BCEF700090505 /* AppValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppValues.swift; sourceTree = "<group>"; };
 		33A701D7234873320002E9D6 /* SwipableContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableContentViewController.swift; sourceTree = "<group>"; };
 		33A701DB2348AE050002E9D6 /* ItemsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTabViewController.swift; sourceTree = "<group>"; };
 		33A701E32348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				049FF33723429EE200EB8BF5 /* customButtons.swift */,
+				332370B2234BCEF700090505 /* AppValues.swift */,
 			);
 			path = "Common Utilities";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				049FF33823429EE200EB8BF5 /* customButtons.swift in Sources */,
 				0475CCC1234234CC00BFC56E /* ViewController.swift in Sources */,
 				33A701D8234873320002E9D6 /* SwipableContentViewController.swift in Sources */,
+				332370B3234BCEF700090505 /* AppValues.swift in Sources */,
 				0475CCBD234234CC00BFC56E /* AppDelegate.swift in Sources */,
 				0475CCBF234234CC00BFC56E /* SceneDelegate.swift in Sources */,
 				33A701DC2348AE050002E9D6 /* ItemsTabViewController.swift in Sources */,

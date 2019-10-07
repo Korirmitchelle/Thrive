@@ -21,10 +21,9 @@ class ItemsTabViewController: ButtonBarPagerTabStripViewController {
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        //Set number of items to 8
-        let count = 8
+        //Set number of items
         var viewControllerArray = [UIViewController]()
-        for _ in 1...count{
+        for _ in 1...AppValues.itemCount{
             let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "swipableContentViewController")
             viewControllerArray.append(view)
         }

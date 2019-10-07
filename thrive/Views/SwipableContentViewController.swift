@@ -10,7 +10,9 @@ import UIKit
 import XLPagerTabStrip
 
 class SwipableContentViewController: UIViewController {
-
+    @IBOutlet weak var scrollableView: UIView!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentImageView: UIImageView!
     @IBOutlet weak var contentNameLabel: UILabel!
     @IBOutlet weak var contentLocationLabel: UILabel!
