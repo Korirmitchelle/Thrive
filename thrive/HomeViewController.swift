@@ -9,8 +9,7 @@
 import UIKit
 class HomeViewController: UIViewController {
     //Number of bottom buttons
-    var cells = 5
-    let buttonImageNames = ["ic_refresh","ic_cancel","ic_star","ic_like","ic_thunder"]
+    var buttonImageNames = ["ic_refresh","ic_cancel","ic_star","ic_like","ic_thunder"]
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var buttonsCollectionView: UICollectionView!
@@ -38,11 +37,13 @@ class HomeViewController: UIViewController {
         loadingView.isHidden = true
         counterView.isHidden = false
         counterLabel.text = String(AppValues.itemCount)
+        buttonImageNames = ["ic_cancel","ic_star","ic_like"]
+        buttonsCollectionView.reloadData()
     }
 }
 extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cells
+        return buttonImageNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,7 +59,7 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
         var insets = self.buttonsCollectionView.contentInset
         let frameWidth = self.view.frame.size.width
         let  collectionViewWidth = (self.buttonsCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width
-        var  leftInsets = (frameWidth - (collectionViewWidth * CGFloat(cells))) * 0.5 - (CGFloat(cells-1) * 5)
+        var  leftInsets = (frameWidth - (collectionViewWidth * CGFloat(buttonImageNames.count))) * 0.5 - (CGFloat(buttonImageNames.count-1) * 5)
         if leftInsets <= 0 {
             leftInsets = 0
         }
