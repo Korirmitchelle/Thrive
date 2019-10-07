@@ -10,12 +10,24 @@ import UIKit
 class HomeViewController: UIViewController {
     var cells = 5
     let buttonImageNames = ["ic_refresh","ic_cancel","ic_star","ic_like","ic_thunder"]
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var buttonsCollectionView: UICollectionView!
-
+    @IBOutlet weak var logoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonsCollectionView.delegate = self
         buttonsCollectionView.dataSource = self
+        
+    }
+    func showLoader(){
+        containerView.isHidden = true
+        loadingView.isHidden = false
+    }
+    func hideLoader(){
+        containerView.isHidden = false
+        loadingView.isHidden = true
     }
 }
 extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -32,6 +44,7 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
+        //Align buttons to the center
         var insets = self.buttonsCollectionView.contentInset
         let frameWidth = self.view.frame.size.width
         let  collectionViewWidth = (self.buttonsCollectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width

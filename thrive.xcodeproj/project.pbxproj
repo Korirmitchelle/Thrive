@@ -55,7 +55,8 @@
 		0475CCB0234234CC00BFC56E = {
 			isa = PBXGroup;
 			children = (
-				049FF33723429EE200EB8BF5 /* customButtons.swift */,
+				332370B1234BBB6300090505 /* Assets */,
+				332370AE234BBA7A00090505 /* Common Utilities */,
 				0475CCBB234234CC00BFC56E /* thrive */,
 				0475CCBA234234CC00BFC56E /* Products */,
 				5C15F1C6AF4735429B0C5684 /* Pods */,
@@ -78,13 +79,28 @@
 				0475CCBC234234CC00BFC56E /* AppDelegate.swift */,
 				0475CCBE234234CC00BFC56E /* SceneDelegate.swift */,
 				0475CCC0234234CC00BFC56E /* ViewController.swift */,
-				0475CCC5234234D200BFC56E /* Assets.xcassets */,
 				0475CCCA234234D200BFC56E /* Info.plist */,
 				330BB65423453FA300B1E019 /* HomeViewController.swift */,
 				33A701DB2348AE050002E9D6 /* ItemsTabViewController.swift */,
 				33A701E22348DA4D0002E9D6 /* UI */,
 			);
 			path = thrive;
+			sourceTree = "<group>";
+		};
+		332370AE234BBA7A00090505 /* Common Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				049FF33723429EE200EB8BF5 /* customButtons.swift */,
+			);
+			path = "Common Utilities";
+			sourceTree = "<group>";
+		};
+		332370B1234BBB6300090505 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0475CCC5234234D200BFC56E /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		33A701E12348DA320002E9D6 /* Views */ = {
