@@ -8,6 +8,7 @@
 
 import UIKit
 class HomeViewController: UIViewController {
+    //Number of bottom buttons
     var cells = 5
     let buttonImageNames = ["ic_refresh","ic_cancel","ic_star","ic_like","ic_thunder"]
     @IBOutlet weak var loadingView: UIView!
@@ -21,9 +22,12 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         buttonsCollectionView.delegate = self
         buttonsCollectionView.dataSource = self
-        hideLoader()
-        
+        showLoader()
+        Common.delay(3){
+            self.hideLoader()
+        }
     }
+    
     func showLoader(){
         containerView.isHidden = true
         loadingView.isHidden = false
@@ -62,7 +66,5 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
         return insets
         
     }
-    
-    
     
 }

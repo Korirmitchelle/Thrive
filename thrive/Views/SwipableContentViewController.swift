@@ -12,16 +12,26 @@ import XLPagerTabStrip
 class SwipableContentViewController: UIViewController {
     @IBOutlet weak var scrollableView: UIView!
     
+    @IBOutlet weak var descriptionHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentImageView: UIImageView!
     @IBOutlet weak var contentNameLabel: UILabel!
     @IBOutlet weak var contentLocationLabel: UILabel!
     @IBOutlet weak var contentDistanceLabel: UILabel!
     var content: String = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        adjustDescriptionTextView()
     }
+    
+    func adjustDescriptionTextView(){
+        let sizeToFit = CGSize(width: descriptionTextView.bounds.size.width, height: CGFloat(MAXFLOAT))
+        let newSize = descriptionTextView.sizeThatFits(sizeToFit)
+        descriptionHeightConstraint.constant = newSize.height
+    }
+    
 }
 extension SwipableContentViewController: IndicatorInfoProvider{
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
