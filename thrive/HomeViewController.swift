@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SwiftyJSON
+
+
 class HomeViewController: UIViewController {
     //Number of bottom buttons
     var buttonImageNames = ["ic_refresh","ic_cancel","ic_star","ic_like","ic_thunder"]
@@ -36,7 +39,7 @@ class HomeViewController: UIViewController {
         containerView.isHidden = false
         loadingView.isHidden = true
         counterView.isHidden = false
-        counterLabel.text = String(AppValues.itemCount)
+        counterLabel.text = String(AppValues.jsonData.count)
         buttonImageNames = ["ic_cancel","ic_star","ic_like"]
         buttonsCollectionView.reloadData()
     }

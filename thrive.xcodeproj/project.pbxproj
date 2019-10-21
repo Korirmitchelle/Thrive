@@ -18,6 +18,9 @@
 		330BB65523453FA300B1E019 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330BB65423453FA300B1E019 /* HomeViewController.swift */; };
 		332370B3234BCEF700090505 /* AppValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332370B2234BCEF700090505 /* AppValues.swift */; };
 		332370B5234BD46A00090505 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332370B4234BD46A00090505 /* Common.swift */; };
+		332370B7234BDE3300090505 /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = 332370B6234BDE3300090505 /* mock.json */; };
+		332370B9234BE02400090505 /* ImageviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332370B8234BE02400090505 /* ImageviewExtension.swift */; };
+		338030C02358A28600BDA8A8 /* ItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338030BF2358A28600BDA8A8 /* ItemsCollectionViewCell.swift */; };
 		33A701D8234873320002E9D6 /* SwipableContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A701D7234873320002E9D6 /* SwipableContentViewController.swift */; };
 		33A701DC2348AE050002E9D6 /* ItemsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A701DB2348AE050002E9D6 /* ItemsTabViewController.swift */; };
 		33A701E42348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A701E32348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift */; };
@@ -36,6 +39,9 @@
 		330BB65423453FA300B1E019 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		332370B2234BCEF700090505 /* AppValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppValues.swift; sourceTree = "<group>"; };
 		332370B4234BD46A00090505 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		332370B6234BDE3300090505 /* mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mock.json; path = ../../../Downloads/mock.json; sourceTree = "<group>"; };
+		332370B8234BE02400090505 /* ImageviewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageviewExtension.swift; sourceTree = "<group>"; };
+		338030BF2358A28600BDA8A8 /* ItemsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionViewCell.swift; sourceTree = "<group>"; };
 		33A701D7234873320002E9D6 /* SwipableContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableContentViewController.swift; sourceTree = "<group>"; };
 		33A701DB2348AE050002E9D6 /* ItemsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTabViewController.swift; sourceTree = "<group>"; };
 		33A701E32348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 				049FF33723429EE200EB8BF5 /* customButtons.swift */,
 				332370B2234BCEF700090505 /* AppValues.swift */,
 				332370B4234BD46A00090505 /* Common.swift */,
+				332370B8234BE02400090505 /* ImageviewExtension.swift */,
 			);
 			path = "Common Utilities";
 			sourceTree = "<group>";
@@ -104,6 +111,7 @@
 		332370B1234BBB6300090505 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				332370B6234BDE3300090505 /* mock.json */,
 				0475CCC5234234D200BFC56E /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -114,6 +122,7 @@
 			children = (
 				33A701D7234873320002E9D6 /* SwipableContentViewController.swift */,
 				33A701E32348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift */,
+				338030BF2358A28600BDA8A8 /* ItemsCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,6 +216,7 @@
 				0475CCC9234234D200BFC56E /* LaunchScreen.storyboard in Resources */,
 				0475CCC6234234D200BFC56E /* Assets.xcassets in Resources */,
 				0475CCC4234234CC00BFC56E /* Main.storyboard in Resources */,
+				332370B7234BDE3300090505 /* mock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,9 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				33A701E42348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift in Sources */,
+				332370B9234BE02400090505 /* ImageviewExtension.swift in Sources */,
 				330BB65523453FA300B1E019 /* HomeViewController.swift in Sources */,
 				049FF33823429EE200EB8BF5 /* customButtons.swift in Sources */,
 				0475CCC1234234CC00BFC56E /* ViewController.swift in Sources */,
+				338030C02358A28600BDA8A8 /* ItemsCollectionViewCell.swift in Sources */,
 				33A701D8234873320002E9D6 /* SwipableContentViewController.swift in Sources */,
 				332370B3234BCEF700090505 /* AppValues.swift in Sources */,
 				0475CCBD234234CC00BFC56E /* AppDelegate.swift in Sources */,

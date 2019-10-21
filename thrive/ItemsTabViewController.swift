@@ -7,54 +7,53 @@
 //
 
 import UIKit
-import XLPagerTabStrip
+import SwiftyJSON
 
-class ItemsTabViewController: ButtonBarPagerTabStripViewController {
+class ItemsTabViewController: UIViewController{
 
     @IBOutlet weak var barCollectionView: UICollectionView!
     override func viewDidLoad() {
-        loadStyles()
         super.viewDidLoad()
-        datasource = self
+        loadData()
+        barCollectionView.dataSource = self
+        barCollectionView.delegate = self
         view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
     }
     
-    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        //Set number of items
-        var viewControllerArray = [UIViewController]()
-        for _ in 1...AppValues.itemCount{
-            let view = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "swipableContentViewController")
-            viewControllerArray.append(view)
+    func loadData(){
+        if let url = Bundle.main.url(forResource: "mock", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let json = try JSON(data: data , options: .allowFragments)
+                guard let jsonArray = json.array else {
+                    return
+                }
+                AppValues.jsonData = jsonArray
+                AppValues.itemCount = jsonArray.count
+            }
+            catch {
+                //No op
+            }
         }
-        return viewControllerArray
+    }
+}
+extension ItemsTabViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return AppValues.jsonData.count
+    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
-    func loadStyles(){
-        settings.style.buttonBarBackgroundColor = UIColor.white
-        settings.style.buttonBarItemBackgroundColor = .clear
-        settings.style.selectedBarHeight = 3.0
-        settings.style.buttonBarHeight = 5
-        settings.style.selectedBarVerticalAlignment = .bottom
-        settings.style.buttonBarMinimumLineSpacing = 10
-        settings.style.buttonBarItemTitleColor = .black
-        settings.style.buttonBarItemsShouldFillAvailableWidth = true
-        settings.style.buttonBarLeftContentInset = 0
-        settings.style.buttonBarRightContentInset = 0
-        changeCurrentIndexProgressive = { (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
-            guard changeCurrentIndex == true else { return }
-            oldCell?.label.textColor = .gray
-            newCell?.label.textColor = UIColor.purple
-            if animated {
-                UIView.animate(withDuration: 0.1, animations: { () -> Void in
-                    newCell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-                    oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-                })
-            }
-            else {
-                newCell?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-                oldCell?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-            }
-        }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemscell", for: indexPath) as? ItemsCollectionViewCell
+        return cell!
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: barCollectionView.frame.size.width, height: barCollectionView.frame.size.height)
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        <#code#>
     }
 }

@@ -7,6 +7,8 @@ target 'thrive' do
 
   # Pods for thrive
   pod 'XLPagerTabStrip', '~> 9.0'
+  pod 'AlamofireImage', '~> 3.5'
+  pod 'SwiftyJSON', '~> 4.0'
 
 
 
