@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class ContentViewController: UITableViewController {
     var content = JSON()
+    var firstName = "JOHN"
 
 }
 extension ContentViewController{
@@ -21,7 +22,9 @@ extension ContentViewController{
     func UpdateData(contentJson: JSON) {
         content = contentJson
         tableView.reloadData()
-        
+        if let name = content["name"].stringValue.split(separator: " ").first?.uppercased(){
+            firstName = String(name)
+        }
     }
 }
 
@@ -50,6 +53,7 @@ extension ContentViewController{
         cell?.contentLocationLabel.text = content["location"].stringValue
         cell?.contentDistanceLabel.text = "\(content["distance"].stringValue) Kilometres away"
         cell?.contentTextView.text = content["details"].stringValue
+        cell?.contentShareLabel.text = "SHARE \(firstName)'S PROFILE"
         return cell!
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
