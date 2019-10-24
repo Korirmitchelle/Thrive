@@ -654,44 +654,26 @@
         <scene sceneID="a5e-mO-Bd5">
             <objects>
                 <viewController id="PeS-3V-4Bp" customClass="ItemsTabViewController" customModule="thrive" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZmF-cX-fOU">
+                    <view key="view" contentMode="scaleToFill" id="ZmF-cX-fOU" customClass="SwipeMenuView" customModule="SwipeMenuViewController">
                         <rect key="frame" x="0.0" y="0.0" width="365" height="574"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Dry-cX-WTm">
-                                <rect key="frame" x="16" y="44" width="333" height="10"/>
-                                <color key="backgroundColor" red="0.98039215686274506" green="0.97647058823529409" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="Ruu-Tt-dAv"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0ig-S3-94z">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="a6c-lh-QbH">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1A4-VM-iyn">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPo-5c-kBn" customClass="SwipeMenuView" customModule="SwipeMenuViewController">
+                                <rect key="frame" x="0.0" y="44" width="365" height="530"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.97647058823529409" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Dry-cX-WTm" secondAttribute="trailing" id="5Dp-6h-ab0"/>
-                            <constraint firstItem="Dry-cX-WTm" firstAttribute="top" secondItem="ZmF-cX-fOU" secondAttribute="topMargin" id="8XC-n8-O7e"/>
-                            <constraint firstItem="Dry-cX-WTm" firstAttribute="leading" secondItem="ZmF-cX-fOU" secondAttribute="leadingMargin" id="xwg-MH-uHH"/>
+                            <constraint firstItem="lEu-ln-lDV" firstAttribute="trailing" secondItem="lPo-5c-kBn" secondAttribute="trailing" id="65i-tk-Hek"/>
+                            <constraint firstItem="lPo-5c-kBn" firstAttribute="leading" secondItem="lEu-ln-lDV" secondAttribute="leading" id="H0D-Ip-gJC"/>
+                            <constraint firstItem="lEu-ln-lDV" firstAttribute="bottom" secondItem="lPo-5c-kBn" secondAttribute="bottom" id="bnx-FE-Ooa"/>
+                            <constraint firstItem="lPo-5c-kBn" firstAttribute="top" secondItem="lEu-ln-lDV" secondAttribute="top" id="zMf-Lh-QOU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lEu-ln-lDV"/>
                     </view>
                     <connections>
-                        <outlet property="barCollectionView" destination="Dry-cX-WTm" id="LC4-ce-tJu"/>
+                        <outlet property="swipeMenuView" destination="ZmF-cX-fOU" id="6eW-ex-zFi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAQ-Yk-DzE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

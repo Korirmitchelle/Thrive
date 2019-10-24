@@ -1,16 +1,20 @@
 PODS:
-  - XLPagerTabStrip (9.0.0)
+  - SwiftyJSON (4.3.0)
+  - SwipeMenuViewController (3.0.0)
 
 DEPENDENCIES:
-  - XLPagerTabStrip (~> 9.0)
+  - SwiftyJSON (~> 4.0)
+  - SwipeMenuViewController
 
 SPEC REPOS:
   trunk:
-    - XLPagerTabStrip
+    - SwiftyJSON
+    - SwipeMenuViewController
 
 SPEC CHECKSUMS:
-  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  SwipeMenuViewController: 572a6fcd7fa95c3d744c760d5e836896817c5735
 
-PODFILE CHECKSUM: c0c2671dc6950cf07e7ad30c5e07a17bed180385
+PODFILE CHECKSUM: 068f8d3ae78df7b05fc11001f001b74ee7d40ecc
 
 COCOAPODS: 1.8.1

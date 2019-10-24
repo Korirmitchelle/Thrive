@@ -6,7 +6,8 @@ target 'thrive' do
   use_frameworks!
 
   # Pods for thrive
-  pod 'XLPagerTabStrip', '~> 9.0'
+  pod 'SwipeMenuViewController'
+  pod 'SwiftyJSON', '~> 4.0'
 
 
 

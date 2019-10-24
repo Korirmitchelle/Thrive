@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import SwiftyJSON
+
 struct AppValues {
     static var itemCount = 8
+    static var currentItemJson = JSON()
 }
