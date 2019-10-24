@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class Common{
     class func delay(_ delay:Double, closure:@escaping ()->()) {
         let when = DispatchTime.now() + delay
