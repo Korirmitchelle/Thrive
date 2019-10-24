@@ -7,18 +7,24 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ContentViewController: UITableViewController {
-     private let customRefreshControl = UIRefreshControl()
-     private let spiner = UIActivityIndicatorView(style: .gray)
+    var content = JSON()
+
 }
 extension ContentViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-       
+    }
+    func UpdateData(contentJson: JSON) {
+        content = contentJson
+        tableView.reloadData()
+        
     }
 }
+
 private extension ContentViewController{
     func setupView() {
         tableView.delegate = self
@@ -26,13 +32,8 @@ private extension ContentViewController{
         tableView.backgroundColor = .white
         tableView.register(UINib(nibName: "cellItem", bundle: nil), forCellReuseIdentifier: "cell")
         tableView.separatorStyle = .none
-        if #available(iOS 10.0, *) {
-            tableView.refreshControl = customRefreshControl
-        } else {
-            // Fallback on earlier versions
-        }
     }
-    
+
     
 }
 extension ContentViewController{
@@ -44,6 +45,11 @@ extension ContentViewController{
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CustomCell
+        cell?.contentImageView.imageFromUrl(url: content["image"].stringValue)
+        cell?.contentNameLabel.text = content["name"].stringValue
+        cell?.contentLocationLabel.text = content["location"].stringValue
+        cell?.contentDistanceLabel.text = "\(content["distance"].stringValue) Kilometres away"
+        cell?.contentTextView.text = content["details"].stringValue
         return cell!
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

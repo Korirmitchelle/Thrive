@@ -1,20 +1,28 @@
 PODS:
+  - Alamofire (4.9.0)
+  - AlamofireImage (3.5.2):
+    - Alamofire (~> 4.8)
   - SwiftyJSON (4.3.0)
   - SwipeMenuViewController (3.0.0)
 
 DEPENDENCIES:
+  - AlamofireImage (~> 3.5)
   - SwiftyJSON (~> 4.0)
   - SwipeMenuViewController
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - AlamofireImage
     - SwiftyJSON
     - SwipeMenuViewController
 
 SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   SwipeMenuViewController: 572a6fcd7fa95c3d744c760d5e836896817c5735
 
-PODFILE CHECKSUM: 068f8d3ae78df7b05fc11001f001b74ee7d40ecc
+PODFILE CHECKSUM: 64f25a6786671f0677279b28e0e37aceee9f8952
 
 COCOAPODS: 1.8.1

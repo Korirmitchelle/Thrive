@@ -7,7 +7,9 @@ target 'thrive' do
 
   # Pods for thrive
   pod 'SwipeMenuViewController'
+  pod 'AlamofireImage', '~> 3.5'
   pod 'SwiftyJSON', '~> 4.0'
+
 
 
 

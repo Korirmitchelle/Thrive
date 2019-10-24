@@ -8,12 +8,15 @@
 
 import UIKit
 import SwipeMenuViewController
+import SwiftyJSON
 
 
 class ItemsTabViewController: UIViewController {
     
     @IBOutlet var swipeMenuView: SwipeMenuView!
-    private var datas: [String] = ["Bulbasaur","Caterpie", "Golem", "Jynx", "Marshtomp", "Salamence", "Riolu", "Araquanid"]
+    var isLoaded = false
+
+    private var datas: [String] = ["cat1","Cat2", "cat3", "cat4", "cat5", "cat6", "cat7", "cat8","cat9","cat10", "cat11", "cat12", "cat13", "cat14", "cat15", "cat16"]
     private var arrayControllers = [String : ContentViewController]()
 
     var options = SwipeMenuViewOptions()
@@ -21,22 +24,55 @@ class ItemsTabViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        options.tabView.style = .segmented
+        options.tabView.height = 5
         datas.forEach { data in
             let vc = ContentViewController()
-            vc.title = data
+            vc.title = ""
             arrayControllers[data] = vc
             self.addChild(vc)
         }
         super.viewDidLoad()
         swipeMenuView.delegate = self
         swipeMenuView.dataSource = self
+        swipeMenuView.tabView?.clipsToBounds = false
+        NotificationCenter.default.addObserver(self, selector: #selector(reload), name: NSNotification.Name(rawValue: "reload"), object: nil)
         view.backgroundColor = UIColor.white
+        
     }
     
-    private func reload() {
+    override func viewWillAppear(_ animated: Bool) {
+        if !isLoaded{
+            loadData()
+            isLoaded = true
+        }
+    }
+    
+    func loadData(){
+        if let url = Bundle.main.url(forResource: "mockdata", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let json = try JSON(data: data , options: .allowFragments)
+                guard let jsonArray = json.array else {
+                    return
+                }
+                AppValues.currentItemJson = jsonArray
+                AppValues.itemCount = jsonArray.count
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reload"), object: nil)
+                for (index,category) in datas.enumerated(){
+                    let vc = arrayControllers[category]
+                    vc?.UpdateData(contentJson: jsonArray[index])
+                }
+            }
+            catch {
+                //No op
+            }
+        }
+    }
+    
+    @objc func reload() {
         swipeMenuView.reloadData(options: options)
     }
-    
     
 }
 extension ItemsTabViewController:SwipeMenuViewDataSource,SwipeMenuViewDelegate{
@@ -44,22 +80,16 @@ extension ItemsTabViewController:SwipeMenuViewDataSource,SwipeMenuViewDelegate{
     }
     
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewDidSetupAt currentIndex: Int) {
-        
     }
     
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, willChangeIndexFrom fromIndex: Int, to toIndex: Int) {
-        
     }
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, didChangeIndexFrom fromIndex: Int, to toIndex: Int) {
-        
     }
     
-    
-    
     // MARK - SwipeMenuViewDataSource
-    
     func numberOfPages(in swipeMenuView: SwipeMenuView) -> Int {
-        return dataCount
+        return AppValues.currentItemJson.count
     }
     
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, titleForPageAt index: Int) -> String {

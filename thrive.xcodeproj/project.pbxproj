@@ -21,6 +21,8 @@
 		330BB65523453FA300B1E019 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330BB65423453FA300B1E019 /* HomeViewController.swift */; };
 		332370B3234BCEF700090505 /* AppValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332370B2234BCEF700090505 /* AppValues.swift */; };
 		332370B5234BD46A00090505 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332370B4234BD46A00090505 /* Common.swift */; };
+		334E88B32361CDA7006368E1 /* mockdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 334E88B22361CDA7006368E1 /* mockdata.json */; };
+		334E88B52361E1D5006368E1 /* imageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334E88B42361E1D5006368E1 /* imageViewExtension.swift */; };
 		33A701DC2348AE050002E9D6 /* ItemsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A701DB2348AE050002E9D6 /* ItemsTabViewController.swift */; };
 		33A701E42348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A701E32348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +43,8 @@
 		330BB65423453FA300B1E019 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		332370B2234BCEF700090505 /* AppValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppValues.swift; sourceTree = "<group>"; };
 		332370B4234BD46A00090505 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		334E88B22361CDA7006368E1 /* mockdata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockdata.json; sourceTree = "<group>"; };
+		334E88B42361E1D5006368E1 /* imageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewExtension.swift; sourceTree = "<group>"; };
 		33A701DB2348AE050002E9D6 /* ItemsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTabViewController.swift; sourceTree = "<group>"; };
 		33A701E32348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCollectionViewCell.swift; sourceTree = "<group>"; };
 		450A6DB03C6C851F5FB904AC /* Pods_thrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_thrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +105,7 @@
 				049FF33723429EE200EB8BF5 /* customButtons.swift */,
 				332370B2234BCEF700090505 /* AppValues.swift */,
 				332370B4234BD46A00090505 /* Common.swift */,
+				334E88B42361E1D5006368E1 /* imageViewExtension.swift */,
 			);
 			path = "Common Utilities";
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				0475CCC5234234D200BFC56E /* Assets.xcassets */,
+				334E88B22361CDA7006368E1 /* mockdata.json */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 			files = (
 				33010849235DF3F700509FFE /* cellItem.xib in Resources */,
 				0475CCC9234234D200BFC56E /* LaunchScreen.storyboard in Resources */,
+				334E88B32361CDA7006368E1 /* mockdata.json in Resources */,
 				0475CCC6234234D200BFC56E /* Assets.xcassets in Resources */,
 				0475CCC4234234CC00BFC56E /* Main.storyboard in Resources */,
 			);
@@ -269,6 +276,7 @@
 				33A701E42348DA9B0002E9D6 /* ButtonsCollectionViewCell.swift in Sources */,
 				330BB65523453FA300B1E019 /* HomeViewController.swift in Sources */,
 				049FF33823429EE200EB8BF5 /* customButtons.swift in Sources */,
+				334E88B52361E1D5006368E1 /* imageViewExtension.swift in Sources */,
 				0475CCC1234234CC00BFC56E /* ViewController.swift in Sources */,
 				332370B3234BCEF700090505 /* AppValues.swift in Sources */,
 				0475CCBD234234CC00BFC56E /* AppDelegate.swift in Sources */,

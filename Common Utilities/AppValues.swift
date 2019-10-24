@@ -11,5 +11,6 @@ import SwiftyJSON
 
 struct AppValues {
     static var itemCount = 8
-    static var currentItemJson = JSON()
+    static var currentItemJson = [JSON]()
+    static var currentIndex = 0
 }
