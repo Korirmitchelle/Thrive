@@ -24,6 +24,8 @@ class ItemsTabViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        options.tabView.additionView.underline.height = 5
+        options.tabView.additionView.backgroundColor = .lightGray
         options.tabView.style = .segmented
         options.tabView.height = 5
         datas.forEach { data in
